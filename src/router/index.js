@@ -1,42 +1,17 @@
-import {createRouter, createWebHashHistory} from 'vue-router'
+import {createRouter, createWebHistory} from 'vue-router'
 
 const Category = () => import('@/views/category/Category')
 const Home = () => import('@/views/home/Home')
 const Profile = () => import('@/views/profile/Profile')
 const ShopCart = () => import('@/views/shopCart/ShopCart')
-const Popular = () => import('@/views/home/titleBar/Popular')
-const New = () => import('@/views/home/titleBar/New')
-const CareChose = () => import('@/views/home/titleBar/CareChose')
+const Detail = () => import('@/views/detail/Detail')
 
 const CategoryList = () => import('@/views/category/CategoryList')
-const routes = [
-  {
-    path: '',
-    redirect: 'home'
-  },
-  {
-    path: '/home',
-    component: Home,
-     redirect: '/home/careChose',
-    children: [
 
-      {
-        name: "popular",
-        path: 'popular',
-        component: Popular
-      },
-      {
-        name: 'new',
-        path: 'new',
-        component: New
-      },
-      {
-        name: 'careChose',
-        path: 'careChose',
-        component: CareChose
-      },
-    ]
-  },
+
+const routes = [
+  {path: '', redirect: '/home'},
+  {path: '/home', component: Home},
   {
     path: '/category',
     component: Category,
@@ -48,18 +23,14 @@ const routes = [
       }
     ]
   },
-  {
-    path: '/profile',
-    component: Profile
-  },
-  {
-    path: '/shopCart',
-    component: ShopCart
-  }
+  {path: '/category', component: Category},
+  {path: '/profile', component: Profile},
+  {path: '/shopcart', component: ShopCart},
+  {path: '/detail/:iid', component: Detail}
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes
 })
 

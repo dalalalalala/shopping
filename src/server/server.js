@@ -19,8 +19,8 @@ app.get('/home/multidata', function (req, res) {
   fs.readFile('./data/homedata/multidata.json', function (err, data) {
     if (err) {
       return res.send('err')
-    }    res.send(JSON.parse(data))
-
+    }
+    res.send(JSON.parse(data))
   })
 })
 app.get('/home/tabdata', function (req, res) {
@@ -32,8 +32,21 @@ app.get('/home/tabdata', function (req, res) {
   })
 })
 app.get('/home/homedata', function (req, res) {
+  console.log(req.query)
   //判断参数
   const path=`./data/homedata/${req.query.type}${req.query.page}.json`
+  // console.log(path)
+  fs.readFile(path, function (err, data) {
+    if (err) {
+      return res.send('err')
+    }
+    res.send((JSON).parse(data))
+  })
+})
+app.get('/detail', function (req, res) {
+  console.log(req.query)
+  //判断参数
+  const path=`./data/homedata/${req.query.iid}.json`
   // console.log(path)
   fs.readFile(path, function (err, data) {
     if (err) {
@@ -61,8 +74,9 @@ app.get('/category/subcategory', function (req, res) {
     if (err) {
       return res.send(err)
     }
+    console.log('分类')
     res.send(JSON.parse(data))
-    console.log(req.query)
+
     // res.send(req.query)
   })
 })

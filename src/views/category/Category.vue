@@ -29,8 +29,6 @@
         this.categoryMess = res.data.category.list
         // console.log(res.data.category.list)
       })
-
-
     }
   }
 </script>

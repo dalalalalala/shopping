@@ -2,10 +2,10 @@
     <div id="tabbar">
         <TabBarItem path="/home" active-color="#BF2371">
             <template v-slot:slot-img>
-                <img src="@/assets/img/tabbar/Home.svg" alt="">
+                <img src="~assets/img/tabbar/Home.svg" alt="">
             </template>
             <template v-slot:slot-active-img>
-                <img src="@/assets/img/tabbar/Home2.svg" alt="">
+                <img src="~assets/img/tabbar/Home2.svg" alt="">
             </template>
             <template v-slot:slot-text>
                  <div>首页</div>
@@ -13,10 +13,10 @@
         </TabBarItem>
         <TabBarItem path="/category" active-color="#BF2371">
            <template v-slot:slot-img>
-                <img src="@/assets/img/tabbar/Category.svg" alt="">
+                <img src="~assets/img/tabbar/Category.svg" alt="">
             </template>
             <template v-slot:slot-active-img>
-                <img src="@/assets/img/tabbar/Category2.svg" alt="">
+                <img src="~assets/img/tabbar/Category2.svg" alt="">
             </template>
             <template v-slot:slot-text>
                  <div>分类</div>
@@ -24,10 +24,10 @@
         </TabBarItem>
         <TabBarItem path="/shopCart">
            <template v-slot:slot-img>
-                <img src="@/assets/img/tabbar/shop-cart.svg" alt="">
+                <img src="~assets/img/tabbar/shop-cart.svg" alt="">
             </template>
             <template v-slot:slot-active-img>
-                <img src="@/assets/img/tabbar/shop-cart2.svg" alt="">
+                <img src="~assets/img/tabbar/shop-cart2.svg" alt="">
             </template>
             <template v-slot:slot-text>
                  <div>购物车</div>
@@ -35,10 +35,10 @@
         </TabBarItem>
         <TabBarItem path="/profile">
             <template v-slot:slot-img>
-                <img src="@/assets/img/tabbar/Profile.svg" alt="">
+                <img src="~assets/img/tabbar/Profile.svg" alt="">
             </template>
             <template v-slot:slot-active-img>
-                <img src="@/assets/img/tabbar/Profile2.svg" alt="">
+                <img src="~assets/img/tabbar/Profile2.svg" alt="">
             </template>
             <template v-slot:slot-text>
                  <div>我的</div>
